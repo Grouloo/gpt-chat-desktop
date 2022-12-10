@@ -10,7 +10,8 @@
     "build": "tsc",
     "start": "yarn build && electron-forge start",
     "package": "yarn build && electron-forge package",
-    "make": "yarn build && electron-forge make"
+    "make": "yarn build && electron-forge make",
+    "publish": "yarn make && electron-forge publish"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.4",

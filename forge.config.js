@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
+      platforms: ['darwin', 'linux', 'windows'],
     },
     {
       name: '@electron-forge/maker-deb',
@@ -21,4 +21,14 @@ module.exports = {
       config: {},
     },
   ],
+  publishers: [{
+    name: '@electron-forge/publisher-github',
+    config: {
+      repository: {
+        owner: 'me',
+        name: 'Grouloo/gpt-chat-desktop'
+      },
+      prerelease: true
+    }
+  }]
 };
