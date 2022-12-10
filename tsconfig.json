@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2015",
+    "rootDir": "src",
+    "outDir": "lib",
+
+    /* Modules */
+    "module": "commonjs" /* Specify what module code is generated. */,
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "isolatedModules": true,
+
+    /* Type Checking */
+    "strict": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+
+    "composite": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}

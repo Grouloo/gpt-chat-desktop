@@ -1,0 +1,17 @@
+{
+  "name": "gpt-chat-desktop",
+  "version": "1.0.0",
+  "description": "A desktop application wrapper for OpenAI's GPT-Chat",
+  "main": "./lib/index.js",
+  "author": "Elliott Lépine",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && electron ./lib"
+  },
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "typescript": "^4.9.4"
+  }
+}
