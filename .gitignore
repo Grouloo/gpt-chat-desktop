@@ -1,5 +1,6 @@
 /lib
 /node_modules
 out/
-/.DS_Store
+.DS_Store
 /.env
+dist/
