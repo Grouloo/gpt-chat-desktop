@@ -2,8 +2,8 @@ import { app, BrowserWindow } from "electron"
 
 const createWindow = () => {
   const window = new BrowserWindow({
-    width: 1600,
-    height: 900,
+    width: 1000,
+    height: 600,
     titleBarStyle: "default",
     titleBarOverlay: true, //frame: false,
     show: false,
