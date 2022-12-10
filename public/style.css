@@ -1,0 +1,11 @@
+html {
+    font-size: 14px;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+*,
+a,
+button {
+    cursor: default;
+    user-select: none;
+}

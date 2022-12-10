@@ -2,11 +2,23 @@ import { app, BrowserWindow } from "electron"
 
 const createWindow = () => {
   const window = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1600,
+    height: 900,
+    titleBarStyle: "default",
+    titleBarOverlay: true, //frame: false,
+    show: false,
   })
 
-  window.loadFile("../public/index.html")
+  window.setTitle("ChatGPT Desktop")
+  window.setFullScreenable(true)
+  //window.setTrafficLightPosition()
+
+  //window.loadFile("../public/index.html")
+  window.loadURL("https://chat.openai.com/chat")
+
+  window.once("ready-to-show", () => {
+    window.show()
+  })
 }
 
 app.whenReady().then(() => {
