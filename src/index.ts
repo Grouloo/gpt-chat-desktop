@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron"
+import { app, BrowserWindow, nativeImage } from "electron"
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -7,6 +7,7 @@ const createWindow = () => {
     titleBarStyle: "default",
     titleBarOverlay: true, //frame: false,
     show: false,
+    icon: `${__dirname}/public/images/icon.png`,
   })
 
   window.setTitle("ChatGPT Desktop")
@@ -32,3 +33,6 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit()
 })
+
+const image = nativeImage.createFromPath("../public/images/icon.png")
+app.dock.setIcon(image)
