@@ -3,6 +3,23 @@ name: Build/release
 on: push
 
 jobs:
+  tsc:
+    name: tsc
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: install node v14
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+
+    - name: yarn install
+      run: yarn install
+      
+    - name: tsc
+      uses: icrawl/action-tsc@v1
+
   release:
     runs-on: ${{ matrix.os }}
 
@@ -13,14 +30,6 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v1
-
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Transpile Typescript to JS
-        uses: iCrawl/action-tsc@v1
 
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
